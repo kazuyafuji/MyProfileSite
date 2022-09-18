@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <script src="https://use.fontawesome.com/8633f5290e.js"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0"
+    />
+    <title>プロフィールサイト</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo"><a href="#">MY PROFILE</a></div>
+      <ul class="sitemap-wrapper">
+        <li class="sitemap-item"><a href="#about">ABOUT</a></li>
+        <li class="sitemap-item"><a href="#works">WORKS</a></li>
+        <li class="sitemap-item"><a href="#skills">SKILLS</a></li>
+        <li class="sitemap-item"><a href="#contact">CONTACT</a></li>
+      </ul>
+    </header>
+    <section class="main">
+      <div class="main-bg">
+        <i class="site-title-icon fa fa-code"></i>
+        <p class="site-title-sub">Frontend Engineer's Site</p>
+        <i class="site-title-icon fa fa-code"></i>
+        <h1 class="site-title">MY PROFILE</h1>
+        <p class="site-description">
+          フロントエンドエンジニアを目指す20歳大学生です
+        </p>
+      </div>
+    </section>
+    <section class="about" id="about">
+      <h2 class="heading">ABOUT</h2>
+      <div class="about-wrapper">
+        <div class="profile-box">
+          <div class="profile-icon"></div>
+          <div class="profile-title">藤原 和矢</div>
+          <p class="profile-description">20歳 | 大学2年生 | 東京</p>
+        </div>
+        <div class="text-box">
+          <p class="about-text">
+            デザインを通じて、より良い体験をつくります。<br />
+            そして、より多くの方にサービスをお届けするお手伝いをさせていただければと思っています。
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="works" id="works">
+      <h2 class="heading">WORKS</h2>
+      <h3 class="sub-heading">SITES</h3>
+      <div class="works-container">
+        <div class="works-box">
+          <a class="image-box" href="#"
+            ><img
+              class="image"
+              src="https://github.com/kazuyafuji/MyProfileSite/blob/main/images/my-profile.png?raw=true"
+              alt="プロフィールサイト"
+          /></a>
+          <div class="title">PROFILE SITE</div>
+        </div>
+      </div>
+      <h3 class="sub-heading">VIDEOS</h3>
+      <div class="works-container">
+        <div class="works-box">
+          <a class="image-box" href="#"
+            ><img
+              class="image"
+              src="https://github.com/kazuyafuji/MyProfileSite/blob/main/images/my-profile.png?raw=true"
+              alt="プロフィールサイト"
+          /></a>
+          <div class="title">PROFILE SITE</div>
+        </div>
+      </div>
+    </section>
+    <section class="skills" id="skills">
+      <h2 class="heading">SKILLS</h2>
+      <div class="skills-wrapper">
+        <div class="skill-box">
+          <div class="skill-icon"><i class="fa-brands fa-html5"></i></div>
+          <div class="title">HTML5 & CSS</div>
+          <p class="skill-text">
+            フロントエンドのコーディングを０から行います。<br />
+            正確なマークアップと、今後の変更への強さを意識しています。動的なCSSの扱いも行うことができます。
+          </p>
+        </div>
+        <div class="skill-box">
+          <div class="skill-icon"><i class="fa-brands fa-js"></i></div>
+          <div class="title">JavaScript</div>
+          <p class="skill-text">
+            JavaScriptを用いたWebアプリケーション開発を行うことができます。まだまだ初学者ですが、ライブラリを使用した開発を行います。フレームワークとしては、Reactを用いています。
+          </p>
+        </div>
+        <div class="skill-box">
+          <div class="skill-icon"><i class="fa-solid fa-paintbrush"></i></div>
+          <div class="title">Design</div>
+          <p class="skill-text">
+            AdobeXDを用いたUIのデザインを行うことができます。AfterEffectを使用したモーショングラフィックスの制作経験もあります。
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="contact" id="contact">
+      <h3 class="heading">CONTACT</h3>
+      <div class="contact-form">
+        <p class="subtitle">名前</p>
+        <input type="text" placeholder="名前" />
+        <p class="subtitle">お問合せ内容</p>
+        <textarea name="textarea" placeholder="本文"></textarea>
+        <input type="submit" />
+      </div>
+    </section>
+    <footer class="footer">
+      <p>@ fujiwara kazuya</p>
+    </footer>
+  </body>
+</html>
