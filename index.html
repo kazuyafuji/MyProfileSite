@@ -1,15 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
   <head>
-    <script src="https://use.fontawesome.com/8633f5290e.js"></script>
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-    />
     <meta charset="UTF-8" />
     <meta
       name="viewport"
@@ -19,6 +10,25 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <!--font-awesome-->
+    <script src="https://use.fontawesome.com/8633f5290e.js"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <!--js-->
+    <script src="/js/package/smooth-scroll-master/dist/smooth-scroll.polyfills.min.js"></script>
+    <script src="/js/main.js"></script>
+    <!--jQuery uncompressed-->
+    <script
+      src="https://code.jquery.com/jquery-3.6.1.js"
+      integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <header class="header">
@@ -121,8 +131,14 @@
         <input type="submit" />
       </div>
     </section>
+    <div class="floating">
+      <a href="#"><i class="fa-solid fa-chevron-up"></i></a>
+    </div>
     <footer class="footer">
       <p>@ fujiwara kazuya</p>
+      <script>
+        var scroll = new SmoothScroll('a[href*="#"]');
+      </script>
     </footer>
   </body>
 </html>
