@@ -1,15 +1,20 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="ja" dir="ltr">
   <head>
     <meta charset="UTF-8" />
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0, minimum-scale=1.0"
     />
+    <meta name="robots" content="noindex,nofollow" />
     <title>プロフィールサイト</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="/js/package/mailform-v8.0.1/css/mailform.css"
+    />
     <!--font-awesome-->
     <script src="https://use.fontawesome.com/8633f5290e.js"></script>
     <link
@@ -20,15 +25,15 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
     />
-    <!--js-->
-    <script src="/js/package/smooth-scroll-master/dist/smooth-scroll.polyfills.min.js"></script>
-    <script src="/js/main.js"></script>
     <!--jQuery uncompressed-->
     <script
       src="https://code.jquery.com/jquery-3.6.1.js"
       integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
       crossorigin="anonymous"
     ></script>
+    <!--js-->
+    <script src="/js/package/smooth-scroll-master/dist/smooth-scroll.polyfills.min.js"></script>
+    <script src="/js/main.js"></script>
   </head>
   <body>
     <header class="header">
@@ -64,6 +69,16 @@
             デザインを通じて、より良い体験をつくります。<br />
             そして、より多くの方にサービスをお届けするお手伝いをさせていただければと思っています。
           </p>
+          <div class="sns">
+            <a
+              class="instagram"
+              href="https://www.instagram.com/fuji_kazuya0131/"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+            <a class="facebook" href="https://www.facebook.com/kazuya3456/"
+              ><i class="fa-brands fa-facebook"></i
+            ></a>
+          </div>
         </div>
       </div>
     </section>
@@ -123,6 +138,7 @@
     </section>
     <section class="contact" id="contact">
       <h3 class="heading">CONTACT</h3>
+      <!--
       <div class="contact-form">
         <p class="subtitle">名前</p>
         <input type="text" placeholder="名前" />
@@ -130,6 +146,176 @@
         <textarea name="textarea" placeholder="本文"></textarea>
         <input type="submit" />
       </div>
+    -->
+      <form
+        class="form-body"
+        action="/js/package/mailform-v8.0.1/php/mailform.php"
+        method="post"
+        id="mail_form"
+      >
+        <dl>
+          <dt><i></i>名前</dt>
+          <dd class="required">
+            <input type="text" name="name_1" value="" placeholder="苗字" />
+            <input type="text" name="name_2" value="" placeholder="名前" />
+          </dd>
+        </dl>
+
+        <dl>
+          <dt><i></i>ふりがな</dt>
+          <dd>
+            <input type="text" name="read_1" value="" placeholder="ひらがな" />
+            <input type="text" name="read_2" value="" placeholder="ひらがな" />
+          </dd>
+        </dl>
+
+        <dl>
+          <dt><i></i>メールアドレス</dt>
+          <dd class="required">
+            <input type="email" name="mail_address" value="" />
+          </dd>
+        </dl>
+
+        <dl>
+          <dt><i></i>メールアドレス(確認用)</dt>
+          <dd><input type="email" name="mail_address_confirm" value="" /></dd>
+        </dl>
+        <dl>
+          <dt><i></i>性別</dt>
+          <dd>
+            <ul>
+              <li>
+                <label
+                  ><input type="radio" name="gender" value="男性" />男性</label
+                >
+              </li>
+              <li>
+                <label
+                  ><input type="radio" name="gender" value="女性" />女性</label
+                >
+              </li>
+            </ul>
+          </dd>
+        </dl>
+        <dl>
+          <dt><i></i>郵便番号</dt>
+          <dd class="required">
+            <input
+              type="text"
+              name="postal"
+              value=""
+              onkeyup="AjaxZip3.zip2addr( this,'','address','address' );"
+              placeholder="ハイフン付き"
+            /><a href="http://www.post.japanpost.jp/zipcode/" target="_blank"
+              >郵便番号検索</a
+            >
+          </dd>
+        </dl>
+
+        <dl>
+          <dt><i></i>住所</dt>
+          <dd><input type="text" name="address" value="" /></dd>
+        </dl>
+
+        <dl>
+          <dt><i></i>電話番号</dt>
+          <dd><input type="tel" name="phone" value="" /></dd>
+        </dl>
+        <dl>
+          <dt><i></i>お問い合わせの種類</dt>
+          <dd>
+            <ul>
+              <li>
+                <label
+                  ><input
+                    type="checkbox"
+                    name="kind[]"
+                    value="WEBサイトについて"
+                  />WEBサイトについて</label
+                >
+              </li>
+              <li>
+                <label
+                  ><input
+                    type="checkbox"
+                    name="kind[]"
+                    value="採用について"
+                  />採用について</label
+                >
+              </li>
+              <li>
+                <label
+                  ><input
+                    type="checkbox"
+                    name="kind[]"
+                    value="ご意見・ご要望"
+                  />ご意見・ご要望</label
+                >
+              </li>
+            </ul>
+          </dd>
+        </dl>
+
+        <dl>
+          <dt><i></i>返信方法のご希望</dt>
+          <dd>
+            <ul>
+              <li>
+                <label
+                  ><input
+                    type="checkbox"
+                    name="response[]"
+                    value="電話での返信を希望"
+                  />電話での返信を希望</label
+                >
+              </li>
+              <li>
+                <label
+                  ><input
+                    type="checkbox"
+                    name="response[]"
+                    value="メールでの返信を希望"
+                  />メールでの返信を希望</label
+                >
+              </li>
+              <li>
+                <label
+                  ><input
+                    type="checkbox"
+                    name="response[]"
+                    value="返信不要"
+                  />返信不要</label
+                >
+              </li>
+            </ul>
+          </dd>
+        </dl>
+
+        <dl>
+          <dt><i></i>お問い合わせの内容</dt>
+          <dd class="required">
+            <textarea name="contents" cols="40" rows="5"></textarea>
+          </dd>
+        </dl>
+        <p id="form_submit">
+          <input type="button" id="form_submit_button" value="送信する" />
+        </p>
+      </form>
+      <script src="/js/package/mailform-v8.0.1/js/mailform-js.php"></script>
+      <!-- フリガナ自動入力ライブラリここから -->
+      <script src="/js/package/mailform-v8.0.1/js/jquery.autoKana.js"></script>
+      <script>
+        (function ($) {
+          $.fn.autoKana('input[name="name_1"]', 'input[name="read_1"]', {
+            katakana: false,
+          });
+          $.fn.autoKana('input[name="name_2"]', 'input[name="read_2"]', {
+            katakana: false,
+          });
+        })(jQuery);
+      </script>
+      <!-- 住所自動入力ライブラリここから -->
+      <script src="/js/package/mailform-v8.0.1/js/ajaxzip3.js"></script>
     </section>
     <div class="floating">
       <a href="#"><i class="fa-solid fa-chevron-up"></i></a>

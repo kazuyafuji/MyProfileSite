@@ -34,6 +34,7 @@ body {
   background-color: #fff;
   color: #333;
   z-index: 1;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
 }
 .header .logo {
   position: absolute;
@@ -185,6 +186,15 @@ body {
   line-height: 3;
   letter-spacing: 1px;
 }
+.sns a i {
+  margin: 50px 50px 0;
+  font-size: 3rem;
+  opacity: 1;
+  cursor: pointer;
+}
+.sns > a:hover {
+  opacity: 0.6;
+}
 
 /*-------------------------------
     WORKS
@@ -305,11 +315,8 @@ body {
     CONTACT
 --------------------------------*/
 .contact {
-  margin: 100px 0 0;
+  padding-top: 100px;
   width: 100%;
-}
-.contact .heading {
-  color: #fff;
 }
 .contact .heading::before,
 .contact .heading::after {
@@ -317,6 +324,12 @@ body {
   opacity: 0.2;
   width: 80%;
 }
+.contact .form-body {
+  color: #454545;
+  font-family: sans-serif;
+  background: #f0f0f0;
+}
+/*--------------------------
 .contact-form {
   margin: 40px auto 0;
   width: 500px;
@@ -356,7 +369,7 @@ body {
   font-size: 1.4rem;
   font-weight: bold;
   line-height: 2px;
-  border: none;
+  border: none; 
   outline: none;
   opacity: 1;
   transition: opacity 0.3s;
@@ -364,6 +377,7 @@ body {
 .contact-form input[type="submit"]:hover {
   opacity: 0.8;
 }
+----------------------------*/
 
 /*-------------------------------
     FOOTER
@@ -504,7 +518,7 @@ body {
 
   /*CONTACT*/
   .contact {
-    margin: 50px 0 0;
+    padding-top: 50px;
   }
   .contact-form {
     width: 80%;
