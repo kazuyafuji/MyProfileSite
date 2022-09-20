@@ -7,7 +7,6 @@ html {
 *::after,
 *::before {
   box-sizing: border-box;
-  cursor: default;
 }
 a {
   color: black;
