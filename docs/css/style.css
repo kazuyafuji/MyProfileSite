@@ -199,7 +199,7 @@ body {
     WORKS
 --------------------------------*/
 .works {
-  padding: 100px 0 0;
+  padding: 100px 0 50px;
   width: 100%;
 }
 .works .heading::before,
@@ -212,7 +212,7 @@ body {
   letter-spacing: 1.5px;
   font-size: 2rem;
   line-height: 1;
-  margin: 60px 0 0;
+  margin-top: 80px;
 }
 .sub-heading::before,
 .sub-heading::after {
@@ -225,29 +225,28 @@ body {
   vertical-align: middle;
   opacity: 0.5;
 }
-/*このままだと、tableの要素が画面幅を超えた時に折り返してくれない*/
 .works .works-container {
   /*background-color: rgba(255, 255, 255, 0.4);*/
-  display: table;
-  margin: 0 auto;
-  table-layout: fixed;
-  border-collapse: separate;
-  border-spacing: 30px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
 }
-.works .works-container .works-box {
-  display: table-cell;
+.works-box {
   width: 350px;
 }
-.works .works-box .image-box {
+.works-box .image-box {
   display: block;
-  margin: 20px auto 0;
+  margin: 20px;
   width: 300px;
   height: 300px;
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
   opacity: 1;
   transition: opacity 0.3s;
 }
-.works .works-box .image-box:hover {
+.works-box .image-box:hover {
   opacity: 0.8;
 }
 .image {
